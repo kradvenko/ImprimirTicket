@@ -48,8 +48,7 @@ public class MyImpresora {
         if (mDeviceList.size() > 0) {
             mDeviceIterator = mDeviceList.values().iterator();
 
-            Toast.makeText(context, "Device List Size: " + String.valueOf(mDeviceList.size()), Toast.LENGTH_SHORT).show();
-
+            //Toast.makeText(context, "Device List Size: " + String.valueOf(mDeviceList.size()), Toast.LENGTH_SHORT).show();
 
             String usbDevice = "";
             while (mDeviceIterator.hasNext()) {
@@ -66,13 +65,13 @@ public class MyImpresora {
                         "ProductID: " + usbDevice1.getProductId() + "\n";
 
                 int interfaceCount = usbDevice1.getInterfaceCount();
-                Toast.makeText(context, "INTERFACE COUNT: " + String.valueOf(interfaceCount), Toast.LENGTH_SHORT).show();
+                //Toast.makeText(context, "INTERFACE COUNT: " + String.valueOf(interfaceCount), Toast.LENGTH_SHORT).show();
 
                 mDevice = usbDevice1;
 
                 //Toast.makeText(context, usbDevice, Toast.LENGTH_SHORT).show();
 
-                Toast.makeText(context,usbDevice1.getProductName(),Toast.LENGTH_LONG).show();
+                //Toast.makeText(context,usbDevice1.getProductName(),Toast.LENGTH_LONG).show();
                 if (usbDevice1.getProductName().contains("Gprinter")) {
                     Toast.makeText(context,"Entro",Toast.LENGTH_LONG).show();
 

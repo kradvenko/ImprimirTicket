@@ -5,19 +5,112 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="horizontal">
-
-    <Button
-        android:id="@+id/btnImprimir"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="159dp"
-        tools:layout_editor_absoluteY="487dp" />
-
-    <WebView
-        android:id="@+id/wbSistema"
+    android:orientation="vertical">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
 
+        <Button
+            android:id="@+id/btnImprimirCorte"
+            android:layout_width="150dp"
+            android:layout_height="90dp"
+            android:text="Imprimir Corte"></Button>
+
+        <Spinner
+            android:id="@+id/spinnerTicket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btnImprimir"
+            android:layout_width="150dp"
+            android:layout_height="90dp"
+            android:text="Imprimir Ticket"></Button>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnSuritr"
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:text="Imprimir Lista por Surtir"></Button>
+
+        <Button
+            android:id="@+id/btnSurtir2"
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:text="Imprimir Lista por Surtir 2"></Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnATickets"
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:text="Historial de tickets"></Button>
+
+    </LinearLayout>
+    <!--
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnImprimir2"
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:text="Imprimir Penúltimo Ticket"></Button>
+
+        <Button
+            android:id="@+id/btnImprimir3"
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:text="Imprimir Antepenúltimo Ticket"></Button>
+
+
+    </LinearLayout>
+    -->
+    <!--
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnImprimir4"
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:text="Imprimir Ante Antepenúltimo Ticket"></Button>
+
+        <Button
+            android:id="@+id/btnImprimirCorte"
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:text="Imprimir Corte"></Button>
+    </LinearLayout>
+    -->
 </LinearLayout>

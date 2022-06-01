@@ -1,19 +1,12 @@
 package com.example.imprimirticket;
 
-import android.content.Intent;
-import android.content.SharedPreferences;
-import android.icu.lang.UCharacter;
 import android.os.AsyncTask;
-import android.provider.UserDictionary;
-import android.widget.Toast;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
-import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -22,32 +15,16 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.regex.Pattern;
 
-public class ImprimirTicketWeb extends AsyncTask<Void, Void, String> {
+public class ImprimirSurtirDiarios2 extends AsyncTask<Void, Void, String> {
     MyImpresora myImpresora;
 
-    //String url="http://cereales.atwebpages.com/site_php/wsObtenerTicket.php?idusuario=4";
-    String url = "http://192.168.1.78:88/cereales/site_php/wsObtenerTicket.php?idusuario=";
+    String url;
     String postData = "";
 
     String result;
-    String usuario;
 
-    public ImprimirTicketWeb(String Usuario, String ticketNum) {
-        this.usuario = Usuario;
-        url = "http://192.168.1.78:88/cereales/site_php/wsObtenerTicket.php?idusuario=4&usuario=Arturo&num=" + ticketNum;
-        if (this.usuario.equals("Bernardo")) {
-            url = "http://192.168.1.78:88/cereales/site_php/wsObtenerTicket.php?idusuario=4&usuario=Bernardo&num=" + ticketNum;
-        } else if (this.usuario.equals("Laura")) {
-            url = "http://192.168.1.78:88/cereales/site_php/wsObtenerTicket.php?idusuario=3&usuario=Laura&num=" + ticketNum;
-        } else if (this.usuario.equals("Sandra")) {
-            url = "http://192.168.1.78:88/cereales/site_php/wsObtenerTicket.php?idusuario=6&usuario=Sandra&num=" + ticketNum;
-        } else if (this.usuario.equals("Jazmin")) {
-            url = "http://192.168.1.78:88/cereales/site_php/wsObtenerTicket.php?idusuario=23&usuario=Jazmin&num=" + ticketNum;
-        } else if (this.usuario.equals("Alessandra")) {
-            url = "http://192.168.1.78:88/cereales/site_php/wsObtenerTicket.php?idusuario=24&usuario=Alessandra&num=" + ticketNum;
-        } else {
-            url = "http://192.168.1.78:88/cereales/site_php/wsObtenerTicket.php?idusuario=4&usuario=Arturo&num=" + ticketNum;
-        }
+    public ImprimirSurtirDiarios2() {
+        url = "http://192.168.1.78:88/cereales/site_php/wsArticulosSurtirDiarios2.php";
     }
 
     @Override
