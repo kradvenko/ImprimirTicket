@@ -1,8 +1,11 @@
  package com.example.imprimirticket;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
+import android.Manifest;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -78,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
         btnCorte.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -129,5 +133,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        if(ActivityCompat.checkSelfPermission(this, Manifest.permission.INTERNET)!= PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.INTERNET},0);
+        }
+/*
+        wbSistema = (WebView)findViewById(R.id.wbSistema);
+        wbSistema.loadUrl("https://www.fb.com");
+
+ */
+
     }
 }
