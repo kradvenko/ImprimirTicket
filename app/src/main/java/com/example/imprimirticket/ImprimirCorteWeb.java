@@ -32,6 +32,10 @@ public class ImprimirCorteWeb extends AsyncTask<Void, Void, String> {
             url = "http://192.168.1.78:88/cereales/site_php/wsObtenerCorte.php?idusuario=3&usuario=Laura";
         } else if (this.usuario.equals("Sandra")) {
             url = "http://192.168.1.78:88/cereales/site_php/wsObtenerCorte.php?idusuario=6&usuario=Sandra";
+        } else if (this.usuario.equals("Jazmin")) {
+            url = "http://192.168.1.78:88/cereales/site_php/wsObtenerCorte.php?idusuario=23&usuario=Jazmin";
+        } else if (this.usuario.equals("Alessandra")) {
+            url = "http://192.168.1.78:88/cereales/site_php/wsObtenerCorte.php?idusuario=24&usuario=Alessandra";
         } else {
             url = "http://192.168.1.78:88/cereales/site_php/wsObtenerCorte.php?idusuario=4&usuario=Arturo";
         }
